@@ -1,0 +1,27 @@
+import java.io.DataInputStream;
+import java.io.IOException;
+
+class GreatestOfTwo
+{
+	public static void main(String args[])
+	{
+		int fno = 0, sno = 0;
+		DataInputStream d = new DataInputStream (System.in);
+		System.out.print("For Finding Greatest of Two Numbers");
+		try
+		{
+			System.out.print("\n\nEnter First Number = ");
+			fno=Integer.parseInt(d.readLine());
+			System.out.print("\n\nEnter Second Number = ");
+			sno = Integer.parseInt(d.readLine());
+		}
+		catch (IOException ioe) { }
+		if(fno == sno)
+			System.out.print("\n\nBoth Are Same");
+		else if(fno > sno)
+			System.out.print("\n\nGreatest = " + fno);
+			else
+				System.out.print("\n\nGreatest = " + sno);
+				System.out.println("\n\n");
+		}
+	}
